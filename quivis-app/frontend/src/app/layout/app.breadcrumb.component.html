@@ -1,0 +1,10 @@
+<div class="layout-breadcrumb-container">
+    <nav class="layout-breadcrumb">
+        <ol>
+            <ng-template ngFor let-item let-last="last" [ngForOf]="breadcrumbs$ | async">
+                <li><span>{{item.label.toUpperCase()}}</span></li>
+                <li *ngIf="!last"><i class="pi pi-angle-right"></i></li>
+            </ng-template>
+        </ol>
+    </nav>
+</div>

@@ -1,0 +1,15 @@
+.card {
+    background-color: var(--surface-card);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ng-hidden {
+    display: none !important;
+}
+

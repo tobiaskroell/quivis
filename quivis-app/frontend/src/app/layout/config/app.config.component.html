@@ -1,0 +1,214 @@
+<div class="layout-config">
+    <p-button
+        type="button"
+        (click)="onConfigButtonClick()"
+        icon="pi pi-cog"
+        styleClass="layout-config-button"
+    ></p-button>
+
+    <p-sidebar
+        [(visible)]="visible"
+        [position]="'right'"
+        [transitionOptions]="'.3s cubic-bezier(0, 0, 0.2, 1)'"
+    >
+        <div class="p-3">
+            <h5>Layout/Theme Scale</h5>
+            <div class="flex align-items-center">
+                <button
+                    icon="pi pi-minus"
+                    type="button"
+                    pButton
+                    (click)="decrementScale()"
+                    class="p-button-text p-button-rounded w-2rem h-2rem mr-2"
+               
+                    [disabled]="scale === scales[0]"
+                ></button>
+                <div class="flex gap-2 align-items-center">
+                    <i
+                        class="pi pi-circle-fill text-300"
+                        *ngFor="let s of scales"
+                        [ngClass]="{ 'text-primary-500': s === scale }"
+                    ></i>
+                </div>
+                <button
+                    icon="pi pi-plus"
+                    type="button"
+                    pButton
+                    (click)="incrementScale()"
+                    class="p-button-text p-button-rounded w-2rem h-2rem ml-2"
+                    [disabled]="scale === scales[scales.length - 1]"
+                ></button>
+            </div>
+
+            <h5>Color Scheme</h5>
+            <div class="flex gap-4">
+                <div class="field-radiobutton flex-1">
+                    <p-radioButton
+                        name="colorScheme"
+                        value="light"
+                        [(ngModel)]="colorScheme"
+                        inputId="light"
+                    ></p-radioButton>
+                    <label for="light" >Light</label>
+                </div>
+                <div class="field-radiobutton flex-1">
+                    <p-radioButton
+                        name="colorScheme"
+                        value="dark"
+                        [(ngModel)]="colorScheme"
+                        inputId="dark"
+                    ></p-radioButton>
+                    <label for="dark" >Dark</label>
+                </div>
+
+                <div class="field-radiobutton flex-1">
+                    <p-radioButton
+                        name="colorScheme"
+                        value="dim"
+                        [(ngModel)]="colorScheme"
+                        inputId="dim"
+                    ></p-radioButton>
+                    <label for="dim" >Dim</label>
+                </div>
+            </div>
+
+            <ng-container *ngIf="!minimal">
+                <h5>Menu Themes</h5>
+                <div class="flex gap-4">
+                    <div
+                        class="field-radiobutton flex-1"
+                        *ngFor="let theme of menuThemes"
+                    >
+                        <p-radioButton
+                            name="colorScheme"
+                            [value]="theme.name"
+                            [disabled]="colorScheme !== 'light'"
+                            [(ngModel)]="menuTheme"
+                            [inputId]="theme.name"
+                        ></p-radioButton>
+                        <label [for]="theme.name">{{
+                            theme.name | titlecase
+                        }}</label>
+                    </div>
+                </div>
+
+                <h5>Topbar Themes</h5>
+                <div class="flex gap-4">
+                    <div
+                        class="field-radiobutton flex-1"
+                        *ngFor="let theme of topbarThemes"
+                    >
+                        <p-radioButton
+                            name="colorScheme"
+                            [value]="theme.name"
+                            [disabled]="colorScheme !== 'light'"
+                            [(ngModel)]="topbarTheme"
+                            [inputId]="theme.name"
+                        ></p-radioButton>
+                        <label [for]="theme.name" >{{
+                            theme.name | titlecase
+                        }}</label>
+                    </div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!minimal">
+                <h5>Menu Mode</h5>
+                <div class="flex flex-wrap row-gap-3">
+                    <div class="flex align-items-center gap-2 w-6">
+                        <p-radioButton
+                            name="menuMode"
+                            value="static"
+                            [(ngModel)]="menuMode"
+                            inputId="mode1"
+                        ></p-radioButton>
+                        <label for="mode1" 
+                            >Static</label
+                        >
+                    </div>
+                    <div class="flex align-items-center gap-2 w-6">
+                        <p-radioButton
+                            name="menuMode"
+                            value="overlay"
+                            [(ngModel)]="menuMode"
+                            inputId="mode2"
+                        ></p-radioButton>
+                        <label for="mode2" 
+                            >Overlay</label
+                        >
+                    </div>
+                    <div class="flex align-items-center gap-2 w-6">
+                        <p-radioButton
+                            name="menuMode"
+                            value="horizontal"
+                            [(ngModel)]="menuMode"
+                            inputId="mode5"
+                        ></p-radioButton>
+                        <label for="mode4" 
+                            >Horizontal</label
+                        >
+                    </div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!minimal">
+                <h5>Input Style</h5>
+                <div class="flex gap-4">
+                    <div class="field-radiobutton flex-1">
+                        <p-radioButton
+                            name="inputStyle"
+                            value="outlined"
+                            [(ngModel)]="inputStyle"
+                            inputId="outlined_input"
+                        ></p-radioButton>
+                        <label for="outlined_input" 
+                            >Outlined</label
+                        >
+                    </div>
+                    <div class="field-radiobutton flex-1">
+                        <p-radioButton
+                            name="inputStyle"
+                            value="filled"
+                            [(ngModel)]="inputStyle"
+                            inputId="filled_input"
+                        ></p-radioButton>
+                        <label for="filled_input" 
+                            >Filled</label
+                        >
+                    </div>
+                </div>
+            </ng-container>
+
+            <h5>Ripple Effect</h5>
+            <p-inputSwitch
+                [(ngModel)]="ripple"
+                styleClass="mb-3"
+            ></p-inputSwitch>
+            
+            <h5>Component Themes</h5>
+            <div class="flex flex-wrap row-gap-3">
+                <div class="w-3" *ngFor="let theme of componentThemes">
+                    <button
+                        type="button"
+                        *ngIf="
+                            (layoutService.config().colorScheme === 'dark' &&
+                                theme.name === 'black') === false
+                        "
+                        class="cursor-pointer p-link w-2rem h-2rem border-round shadow-2 flex-shrink-0 flex justify-content-center align-items-center border-circle"
+                        (click)="changeTheme(theme.name)"
+                        [ngStyle]="{ 'background-color': theme.color }"
+                    >
+                        <i
+                            *ngIf="componentTheme === theme.name"
+                            [class]="
+                                theme.name == 'white'
+                                    ? 'pi pi-check text-gray-900 '
+                                    : 'pi pi-check text-white'
+                            "
+                        ></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </p-sidebar>
+</div>

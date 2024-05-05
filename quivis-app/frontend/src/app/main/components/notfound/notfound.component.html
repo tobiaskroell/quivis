@@ -1,0 +1,43 @@
+<div
+    class="h-screen"
+    style="background: linear-gradient(0deg, #006d6d 0%, #00acac 100%)"
+>
+    <div
+        class="bg-gray-100 flex align-items-center justify-content-center"
+        style="height: 30%"
+    >
+        <img
+            src="assets/layout/images/icon-404.png"
+            alt="poseidon-layout"
+            width="100px"
+            class="block"
+        />
+    </div>
+
+    <div class="flex align-items-center flex-column" style="height: 70%">
+        <div class="p-7 text-center">
+            <span class="block text-white text-5xl font-bold mb-4"
+                >Seite nicht gefunden</span
+            >
+            <span class="block text-white mb-6"
+                >Die Seite die du gesucht hast existiert nicht.</span
+            >
+            <button
+                pButton
+                pRipple
+                [routerLink]="['/']"
+                label="Dashboard"
+                icon="pi pi-home"
+                class="w-9 block mx-auto mt-0 mb-8 surface-0 text-color border-none"
+            ></button>
+            <a [routerLink]="['/']">
+                <img
+                    src="assets/layout/images/logo-quivis.png"
+                    alt="quivis-layout"
+                    class="block mx-auto mt-0 mb-3"
+                    style="height: 32px"
+                />
+            </a>
+        </div>
+    </div>
+</div>
