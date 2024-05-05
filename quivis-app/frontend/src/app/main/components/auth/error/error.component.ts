@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-error',
-  standalone: true,
-  imports: [],
-  templateUrl: './error.component.html',
-  styleUrl: './error.component.scss'
+    templateUrl: './error.component.html',
+    styles: [
+        `
+            :host ::ng-deep .p-button-label {
+                font-weight: 400;
+            }
+        `,
+    ],
 })
-export class ErrorComponent {
-
-}
+export class ErrorComponent {}

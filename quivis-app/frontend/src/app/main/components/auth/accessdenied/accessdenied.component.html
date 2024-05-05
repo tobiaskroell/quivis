@@ -1,1 +1,45 @@
-<p>accessdenied works!</p>
+<div
+    class="h-screen"
+    style="background: linear-gradient(0deg, #812038 0%, #f16383 100%)"
+>
+    <div
+        class="bg-gray-100 flex align-items-center justify-content-center"
+        style="height: 30%"
+    >
+        <img
+            src="assets/layout/images/icon-access.png"
+            alt="quivis-layout"
+            width="100px"
+            class="block"
+        />
+    </div>
+
+    <div class="flex align-items-center flex-column" style="height: 70%">
+        <div class="p-7 text-center">
+            <span class="block text-white text-5xl font-bold mb-4"
+                >Zugriff verweigert</span
+            >
+            <span class="block text-white mb-6"
+                >Du hast nicht die benötigten Rechte, um auf diese Seite zuzugreifen.</span
+            >
+            <button
+                pButton
+                pRipple
+                [routerLink]="['/']"
+                label="Dashboard"
+                icon="pi pi-home"
+                class="w-9 block mx-auto mt-0 mb-8 surface-0 text-color border-none"
+            ></button>
+            <a [routerLink]="['/']">
+                <img
+                    src="assets/layout/images/logo-quivis.png"
+                    alt="quivis-layout"
+                    class="block mx-auto mt-0 mb-3"
+                    style="height: 56px"
+                />
+            </a>
+        </div>
+    </div>
+</div>
+<app-config [minimal]="true"></app-config>
+

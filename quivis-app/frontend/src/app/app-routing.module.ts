@@ -21,14 +21,6 @@ const routes: Routes = [
             },
 
             {
-                path: 'notfound',
-                loadChildren: () =>
-                    import('./main/components/notfound/notfound.module').then(
-                        (m) => m.NotfoundModule
-                    ),
-            },
-
-            {
                 path: 'landing',
                 loadChildren: () =>
                     import('./main/components/landing/landing.module').then(
@@ -36,6 +28,30 @@ const routes: Routes = [
                     ),
             },
         ]
+    },
+
+    {
+        path: 'accessdenied',
+        loadChildren: () =>
+            import('./main/components/auth/accessdenied/accessdenied.module').then(
+                (m) => m.AccessdeniedModule
+            ),
+    },
+
+    {
+        path: 'error',
+        loadChildren: () =>
+            import('./main/components/auth/error/error.module').then(
+                (m) => m.ErrorModule
+            ),
+    },
+
+    {
+        path: 'login',
+        loadChildren: () =>
+            import('./main/components/auth/login/login.module').then(
+                (m) => m.LoginModule
+            ),
     },
 
     { path: '**', redirectTo: '/notfound' },

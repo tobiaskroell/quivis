@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-accessdenied',
-  standalone: true,
-  imports: [],
-  templateUrl: './accessdenied.component.html',
-  styleUrl: './accessdenied.component.scss'
+    templateUrl: './accessdenied.component.html',
+    styles: [
+        `
+            :host ::ng-deep .p-button-label {
+                font-weight: 400;
+            }
+        `,
+    ],
 })
-export class AccessdeniedComponent {
-
-}
+export class AccessdeniedComponent { }

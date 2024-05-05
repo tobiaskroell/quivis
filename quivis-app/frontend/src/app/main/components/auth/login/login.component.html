@@ -1,1 +1,52 @@
-<p>login works!</p>
+<div
+    class="h-screen text-bluegray-200"
+    style="background: linear-gradient(180deg, #525d72 0%, #69768d 100%)"
+>
+    <div class="flex justify-content-center align-items-center h-full ">
+        <div
+            class="h-full text-center py-6 px-4 flex justify-content-between flex-column max-w-30rem"
+        >
+            <a [routerLink]="['/']">
+                <img
+                    src="assets/layout/images/logo-quivis.png"
+                    alt="quivis-layout"
+                    height="45px"
+                />
+            </a>
+            <div>
+                <h2 class="text-bluegray-200">Einloggen</h2>
+                <p class="font-semibold m-0 text-bluegray-100 mb-5">
+                    Du hast noch keinen Account?
+                    <a href="#" class="cursor-pointer text-white">Hier registrieren</a>
+                </p>
+                <input
+                    type="text"
+                    autocomplete="off"
+                    pInputText
+                    placeholder="Email"
+                    class="w-11 mb-4 text-bluegray-600 surface-ground "
+                />
+                <input
+                    type="password"
+                    autocomplete="off"
+                    pInputText
+                    placeholder="Passwort"
+                    class="w-11 mb-4 text-bluegray-600 surface-ground "
+                />
+                <button
+                    pButton
+                    pRipple
+                    label="LOGIN"
+                    type="button"
+                    class="w-11 "
+                ></button>
+            </div>
+
+            <p class="font-semibold m-0 text-bluegray-200">
+                Probleme? <a href="#" class="text-white">Klicke hier</a> um zur
+                Hilfe zu gelangen.
+            </p>
+        </div>
+    </div>
+</div>
+<app-config [minimal]="true"></app-config>

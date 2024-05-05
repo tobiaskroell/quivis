@@ -13,6 +13,12 @@ import { NotfoundRoutingModule } from './main/components/notfound/notfound-routi
 import { LandingRoutingModule } from './main/components/landing/landing-routing.module';
 import { HelpRoutingModule } from './main/components/help/help-routing.module';
 import { LandingModule } from './main/components/landing/landing.module';
+import { AccessdeniedModule } from './main/components/auth/accessdenied/accessdenied.module';
+import { AccessdeniedRoutingModule } from './main/components/auth/accessdenied/accessdenied-routing.module';
+import { ErrorRoutingModule } from './main/components/auth/error/error-routing.module';
+import { ErrorModule } from './main/components/auth/error/error.module';
+import { LoginModule } from './main/components/auth/login/login.module';
+import { LoginRoutingModule } from './main/components/auth/login/login-routing.module';
 
 @NgModule({
     declarations: [
@@ -30,7 +36,13 @@ import { LandingModule } from './main/components/landing/landing.module';
         NotfoundRoutingModule,
         LandingRoutingModule,
         HelpRoutingModule,
-        LandingModule
+        LandingModule,
+        AccessdeniedModule,
+        AccessdeniedRoutingModule,
+        ErrorRoutingModule,
+        ErrorModule,
+        LoginModule,
+        LoginRoutingModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
