@@ -5,7 +5,7 @@ import {
     OnDestroy,
     ViewChild,
 } from '@angular/core';
-import { LayoutService } from './service/app.layout.service';
+import { LayoutService } from './services/app.layout.service';
 
 @Component({
     selector: 'app-sidebar',

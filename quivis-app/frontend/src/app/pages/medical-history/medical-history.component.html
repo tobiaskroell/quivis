@@ -1,0 +1,27 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <h4>Medizinische Historie</h4>
+            <p-button label="Neuer Eintrag"></p-button>
+            <br><br>
+            <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+                <ng-template pTemplate="marker" let-event>
+                    <span
+                        class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1"
+                        [style]="{ 'background-color': event.color }">
+                        <i [class]="event.icon"></i>
+                    </span>
+                </ng-template>
+                <ng-template pTemplate="content" let-event>
+                    <p-card [header]="event.title" [subheader]="event.date">
+                        <img *ngIf="event.image"
+                            [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image"
+                            [alt]="event.name" width="200" class="shadow-2" />
+                        <!-- <p [style.white-space]="'pre-wrap'">{{ event.text }}</p> -->
+                        <p-button label="Mehr anzeigen" [text]="true" [routerLink]="['/medical-history', event.id, event.title]"></p-button>
+                    </p-card>
+                </ng-template>
+            </p-timeline>
+        </div>
+    </div>
+</div>

@@ -3,22 +3,22 @@ import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
-import { DashboardRoutingModule } from './main/components/dashboard/dashboard-routing.module';
-import { LabReportsRoutingModule } from './main/components/lab-reports/lab-reports-routing.module';
-import { MedicalHistoryRoutingModule } from './main/components/medical-history/medical-history-routing.module';
-import { MedicationPlanRoutingModule } from './main/components/medication-plan/medication-plan-routing.module';
-import { NutritionalDiaryRoutingModule } from './main/components/nutritional-diary/nutritional-diary-routing.module';
-import { NotfoundModule } from './main/components/notfound/notfound.module';
-import { NotfoundRoutingModule } from './main/components/notfound/notfound-routing.module';
-import { LandingRoutingModule } from './main/components/landing/landing-routing.module';
-import { HelpRoutingModule } from './main/components/help/help-routing.module';
-import { LandingModule } from './main/components/landing/landing.module';
-import { AccessdeniedModule } from './main/components/auth/accessdenied/accessdenied.module';
-import { AccessdeniedRoutingModule } from './main/components/auth/accessdenied/accessdenied-routing.module';
-import { ErrorRoutingModule } from './main/components/auth/error/error-routing.module';
-import { ErrorModule } from './main/components/auth/error/error.module';
-import { LoginModule } from './main/components/auth/login/login.module';
-import { LoginRoutingModule } from './main/components/auth/login/login-routing.module';
+import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
+import { LabReportsRoutingModule } from './pages/lab-reports/lab-reports-routing.module';
+import { MedicalHistoryRoutingModule } from './pages/medical-history/medical-history-routing.module';
+import { MedicationPlanRoutingModule } from './pages/medication-plan/medication-plan-routing.module';
+import { NutritionalDiaryRoutingModule } from './pages/nutritional-diary/nutritional-diary-routing.module';
+import { NotfoundModule } from './pages/notfound/notfound.module';
+import { NotfoundRoutingModule } from './pages/notfound/notfound-routing.module';
+import { LandingRoutingModule } from './pages/landing/landing-routing.module';
+import { HelpRoutingModule } from './pages/help/help-routing.module';
+import { LandingModule } from './pages/landing/landing.module';
+import { AccessdeniedModule } from './auth/accessdenied/accessdenied.module';
+import { AccessdeniedRoutingModule } from './auth/accessdenied/accessdenied-routing.module';
+import { ErrorRoutingModule } from './auth/error/error-routing.module';
+import { ErrorModule } from './auth/error/error.module';
+import { LoginModule } from './auth/login/login.module';
+import { LoginRoutingModule } from './auth/login/login-routing.module';
 
 @NgModule({
     declarations: [

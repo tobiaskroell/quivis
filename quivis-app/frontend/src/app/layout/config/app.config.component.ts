@@ -4,7 +4,7 @@ import {
     ColorScheme,
     LayoutService,
     MenuMode,
-} from '../service/app.layout.service';
+} from '../services/app.layout.service';
 
 @Component({
     selector: 'app-config',

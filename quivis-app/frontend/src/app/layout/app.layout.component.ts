@@ -10,7 +10,7 @@ import { filter, Subscription } from 'rxjs';
 import { MenuService } from './app.menu.service';
 import { AppSidebarComponent } from './app.sidebar.component';
 import { AppTopbarComponent } from './app.topbar.component';
-import { LayoutService } from './service/app.layout.service';
+import { LayoutService } from './services/app.layout.service';
 
 @Component({
     selector: 'app-layout',

@@ -20,7 +20,7 @@ import {
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { MenuService } from './app.menu.service';
-import { LayoutService } from './service/app.layout.service';
+import { LayoutService } from './services/app.layout.service';
 import { AppSidebarComponent } from './app.sidebar.component';
 import { DomHandler } from 'primeng/dom';
 
