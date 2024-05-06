@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { RouterModule } from '@angular/router';
+import { NutritionalDiaryComponent } from './nutritional-diary.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+	imports: [RouterModule.forChild([
+		{ path: '', component: NutritionalDiaryComponent }
+	])],
+	exports: [RouterModule]
 })
 export class NutritionalDiaryRoutingModule { }

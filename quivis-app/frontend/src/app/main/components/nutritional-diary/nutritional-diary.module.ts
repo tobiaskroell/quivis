@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { NutritionalDiaryRoutingModule } from './nutritional-diary-routing.module';
+import { NutritionalDiaryComponent } from './nutritional-diary.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+	imports: [
+		CommonModule,
+		NutritionalDiaryRoutingModule
+	],
+	declarations: [NutritionalDiaryComponent]
 })
 export class NutritionalDiaryModule { }

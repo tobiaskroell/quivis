@@ -17,28 +17,28 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Medizinische Historie',
                         icon: 'pi pi-fw pi-calendar',
-                        routerLink: ['/apps/calendar'],
+                        routerLink: ['/medical-history'],
                     },
                     {
                         label: 'Medikationsplan',
                         icon: 'pi pi-fw pi-comments',
-                        routerLink: ['/apps/chat'],
+                        routerLink: ['/medication-plan'],
                     },
                     {
                         label: 'Laborberichte',
                         icon: 'pi pi-fw pi-folder',
-                        routerLink: ['/apps/files'],
+                        routerLink: ['/lab-reports'],
                     },
                     {
                         label: 'Ernährungstagebuch',
                         icon: 'pi pi-fw pi-sliders-v',
-                        routerLink: ['/apps/kanban'],
+                        routerLink: ['/nutritional-diary'],
                     },
-                    {
-                        label: 'LLM-Assist',
-                        icon: 'pi pi-fw pi-check-square',
-                        routerLink: ['/apps/tasklist'],
-                    },
+                    // {
+                    //     label: 'LLM-Assist',
+                    //     icon: 'pi pi-fw pi-check-square',
+                    //     routerLink: ['/llm-assist'],
+                    // },
                 ],
             },
 
@@ -49,7 +49,7 @@ export class AppMenuComponent implements OnInit {
                     {
                         label: 'Hilfe',
                         icon: 'pi pi-fw pi-calendar',
-                        routerLink: ['/apps/calendar'],
+                        routerLink: ['/help'],
                     },
                 ],
             },
