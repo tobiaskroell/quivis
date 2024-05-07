@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="card">
             <h4>Medizinische Historie</h4>
-            <p-button label="Neuer Eintrag"></p-button>
+            <p-button label="Neuer Eintrag" [routerLink]="['/medical-history-add']"></p-button>
             <br><br>
             <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
                 <ng-template pTemplate="marker" let-event>

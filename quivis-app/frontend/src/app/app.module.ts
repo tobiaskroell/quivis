@@ -22,7 +22,7 @@ import { LoginRoutingModule } from './auth/login/login-routing.module';
 import { MedicalHistoryAddModule } from './pages/medical-history-add/medical-history-add.module';
 import { MedicalHistoryEntryModule } from './pages/medical-history-entry/medical-history-entry.module';
 import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/medical-history-entry-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
     declarations: [
         AppComponent
@@ -48,7 +48,8 @@ import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/
         LoginRoutingModule,
         MedicalHistoryAddModule,
         MedicalHistoryEntryModule,
-        MedicalHistoryEntryRoutingModule
+        MedicalHistoryEntryRoutingModule,
+        HttpClientModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },

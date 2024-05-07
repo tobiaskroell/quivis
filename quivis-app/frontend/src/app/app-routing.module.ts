@@ -68,6 +68,14 @@ const routes: Routes = [
                         (m) => m.NutritionalDiaryModule
                     ),
 
+            },
+            {
+                path: 'medical-history-add',
+                loadChildren: () =>
+                    import('./pages/medical-history-add/medical-history-add.module').then(
+                        (m) => m.MedicalHistoryAddModule
+                    ),
+
             }
         ]
     },
