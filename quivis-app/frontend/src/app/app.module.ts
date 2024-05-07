@@ -19,6 +19,9 @@ import { ErrorRoutingModule } from './auth/error/error-routing.module';
 import { ErrorModule } from './auth/error/error.module';
 import { LoginModule } from './auth/login/login.module';
 import { LoginRoutingModule } from './auth/login/login-routing.module';
+import { MedicalHistoryAddModule } from './pages/medical-history-add/medical-history-add.module';
+import { MedicalHistoryEntryModule } from './pages/medical-history-entry/medical-history-entry.module';
+import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/medical-history-entry-routing.module';
 
 @NgModule({
     declarations: [
@@ -42,7 +45,10 @@ import { LoginRoutingModule } from './auth/login/login-routing.module';
         ErrorRoutingModule,
         ErrorModule,
         LoginModule,
-        LoginRoutingModule
+        LoginRoutingModule,
+        MedicalHistoryAddModule,
+        MedicalHistoryEntryModule,
+        MedicalHistoryEntryRoutingModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
