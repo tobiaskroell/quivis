@@ -71,6 +71,9 @@ export class MedicalHistoryService {
     return this.http.get(url);
   }
 
+  getEntries(): Observable<any> {
+    return this.http.get(this.POST_ROUTE);
+  }
 
 
 }

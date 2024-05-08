@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-const MEDICALHISTORY_MOCKDATA = '/assets/mockdata/medicalhistorymockdata.json';
+import { MedicalHistoryService } from 'src/app/services/medical-history.service';
 
 @Component({
   selector: 'app-medical-history',
@@ -10,26 +8,20 @@ const MEDICALHISTORY_MOCKDATA = '/assets/mockdata/medicalhistorymockdata.json';
 export class MedicalHistoryComponent implements OnInit {
   entries: any[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private medicalHistoryService: MedicalHistoryService) { }
 
   ngOnInit() {
-    this.loadData();
+    this.fetchData();
   }
 
-  loadData() {
-    this.http.get<any>(MEDICALHISTORY_MOCKDATA).subscribe(
+  fetchData() {
+    this.medicalHistoryService.getEntries().subscribe(
       data => {
-        this.entries = data.entries.reverse();
+        this.entries = data.reverse();
       },
       error => {
         console.error('Error loading data:', error);
       }
     );
   }
-
-  // navigateToUrl(id: number) {
-  //   console.log('test', id);
-  //   window.location.href = 'http://localhost:3000/' + id;
-  // }
 }
-
