@@ -72,7 +72,6 @@ export class MedicalHistoryAddComponent {
 
   async saveEntry() {
     console.log('Anzahl Eintrage in JSON:', this.numEntries);
-
     const data = {
       id: this.numEntries + 1,
       title: this.medicalHistoryEntry.title,
