@@ -1,7 +1,7 @@
 import { Component, ViewChildren, QueryList, ElementRef } from '@angular/core';
 import { Image, MedicalHistoryEntryModel } from 'src/app/pages/medical-history-entry/medical-history-entry.model';
 import { Router } from '@angular/router';
-import { MedicalHistoryAddService } from '../../services/medical-history.service';
+import { MedicalHistoryService } from '../../services/medical-history.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class MedicalHistoryAddComponent {
 
   constructor(
     private router: Router,
-    private medicalHistoryAddService: MedicalHistoryAddService) {
+    private medicalHistoryAddService: MedicalHistoryService) {
     
   }
 

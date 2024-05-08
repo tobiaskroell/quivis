@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class MedicalHistoryAddService {
+export class MedicalHistoryService {
   POST_ROUTE = 'http://localhost:3000/entries';
   numEntries: number = 0;
 
@@ -38,9 +38,6 @@ export class MedicalHistoryAddService {
     });
   }
 
-
-
-
   // Returns an instance of Observable. In this case this.http.get(this.url + '/users'); is the Observable.
   // getUsers(): Observable<any> {
   //   return this.http.get(this.url + '/entries');
@@ -59,7 +56,7 @@ export class MedicalHistoryAddService {
     try {
       // Send a POST request to save the data
       await lastValueFrom(this.http.post(this.POST_ROUTE, data));
-      console.log(`Medical History Entry \"${data.title}\" saved successfully`);
+      console.log(`Medical History Entry \"${data.id}\" saved successfully`);
 
       // Navigate to the medical history page after saving the entry
       this.router.navigate(['/medical-history']);
@@ -67,6 +64,11 @@ export class MedicalHistoryAddService {
     } catch (error) {
       console.error('Error saving entry:', error);
     }
+  }
+
+  getEntry(id: number): Observable<any> {
+    const url = `${this.POST_ROUTE}/${id}`;
+    return this.http.get(url);
   }
 
 
