@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AppLayoutComponent } from './layout/app.layout.component';
+import { NutritionalDiaryComponent } from './pages/nutritional-diary/nutritional-diary.component';
+import { MedicalHistoryEntryComponent } from './pages/medical-history-entry/medical-history-entry.component';
 
 const routerOptions: ExtraOptions = {
     anchorScrolling: 'enabled', // When set to 'enabled', clicking on an anchor link within the application will smoothly scroll to the corresponding section or element with the matching id attribute.
@@ -8,6 +10,7 @@ const routerOptions: ExtraOptions = {
 };
 
 const routes: Routes = [
+    
     {
         path: '',
         component: AppLayoutComponent,
@@ -48,6 +51,10 @@ const routes: Routes = [
                     ),
             },
             {
+                // Without lazy loading
+                path: 'medical-history/entries/:id', component: MedicalHistoryEntryComponent
+            },
+            {
                 path: 'medication-plan',
                 loadChildren: () =>
                     import('./pages/medication-plan/medication-plan.module').then(
@@ -60,14 +67,6 @@ const routes: Routes = [
                     import('./pages/nutritional-diary/nutritional-diary.module').then(
                         (m) => m.NutritionalDiaryModule
                     ),
-            },
-            {
-                path: 'medical-history/:id/:title',
-                loadChildren: () =>
-                    import('./pages/nutritional-diary/nutritional-diary.module').then(
-                        (m) => m.NutritionalDiaryModule
-                    ),
-
             },
             {
                 path: 'medical-history-add',

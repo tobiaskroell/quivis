@@ -1,4 +1,4 @@
-export interface MedicalHistoryEntry {
+export interface MedicalHistoryEntryModel {
     id: number;
     title: string;
     date: string; 

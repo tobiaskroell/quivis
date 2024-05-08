@@ -4,10 +4,10 @@
         <div class="col-12 lg:col-8">
             <div class="grid formgrid">
                 <div class="col-12 lg:col-8 field">
-                    <input pInputText type="text" placeholder="Titel" label="Text" [(ngModel)]="medicalHistoryEntry.title" />
+                    <input pInputText type="text" placeholder="Titel" label="Text" [(ngModel)]="medicalHistoryEntryModel.title" />
                 </div>
                 <div class="col-12 lg:col-4 field">
-                    <input pInputText type="text" placeholder="Datum" label="Price" [(ngModel)]="medicalHistoryEntry.date" />
+                    <input pInputText type="text" placeholder="Datum" label="Price" [(ngModel)]="medicalHistoryEntryModel.date" />
                 </div>
                 <!-- <div class="col-12 lg:col-4 field">
                     <input
@@ -28,7 +28,7 @@
                     />
                 </div> -->
                 <div class="col-12 field">
-                    <p-editor [(ngModel)]="medicalHistoryEntry.text" [style]="{ height: '250px' }"></p-editor>
+                    <p-editor [(ngModel)]="medicalHistoryEntryModel.text" [style]="{ height: '250px' }"></p-editor>
                 </div>
                 <div class="col-12 field">
                     <p-fileUpload #fileUploader name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
@@ -38,14 +38,14 @@
                         <ng-template pTemplate="content">
                             <div class="h-15rem overflow-y-auto py-3 border-round" style="cursor: copy" (click)="
                                     fileUploader.advancedFileInput.nativeElement.click()">
-                                <div *ngIf="!medicalHistoryEntry.images.length"
+                                <div *ngIf="!medicalHistoryEntryModel.images.length"
                                     class="flex flex-column w-full h-full justify-content-center align-items-center">
                                     <i class="pi pi-file text-4xl text-primary"></i>
                                     <span class="block font-semibold text-900 text-lg mt-3">Datei hinzufügen</span>
                                 </div>
-                                <div class="flex flex-wrap gap-3 border-round" *ngIf="medicalHistoryEntry.images.length">
+                                <div class="flex flex-wrap gap-3 border-round" *ngIf="medicalHistoryEntryModel.images.length">
                                     <div *ngFor="
-                                        let file of medicalHistoryEntry.images;
+                                        let file of medicalHistoryEntryModel.images;
                                         let i = index"
                                         class="h-full relative w-7rem h-7rem border-3 border-transparent border-round hover:bg-primary transition-duration-100 cursor-auto"
                                         (mouseenter)="onImageMouseOver(file)" (mouseleave)="onImageMouseLeave(file)"
@@ -82,7 +82,7 @@
                             class="p-button-primary flex-1 border-round"
                             label="Speichern"
                             icon="pi pi-fw pi-check"
-                            (click)="saveEntry()"
+                            (click)="onAddEntry()"
                         ></button>
                     </div>
                 </div>

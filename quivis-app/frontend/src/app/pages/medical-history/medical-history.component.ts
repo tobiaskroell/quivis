@@ -8,7 +8,7 @@ const MEDICALHISTORY_MOCKDATA = '/assets/mockdata/medicalhistorymockdata.json';
   templateUrl: './medical-history.component.html'
 })
 export class MedicalHistoryComponent implements OnInit {
-  events: any[] = [];
+  entries: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -19,11 +19,17 @@ export class MedicalHistoryComponent implements OnInit {
   loadData() {
     this.http.get<any>(MEDICALHISTORY_MOCKDATA).subscribe(
       data => {
-        this.events = data.entries.reverse();
+        this.entries = data.entries.reverse();
       },
       error => {
-        console.error('Error loading events:', error);
+        console.error('Error loading data:', error);
       }
     );
   }
+
+  // navigateToUrl(id: number) {
+  //   console.log('test', id);
+  //   window.location.href = 'http://localhost:3000/' + id;
+  // }
 }
+
