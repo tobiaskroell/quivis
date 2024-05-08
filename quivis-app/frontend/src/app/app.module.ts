@@ -23,6 +23,7 @@ import { MedicalHistoryAddModule } from './pages/medical-history-add/medical-his
 import { MedicalHistoryEntryModule } from './pages/medical-history-entry/medical-history-entry.module';
 import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/medical-history-entry-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
     declarations: [
         AppComponent

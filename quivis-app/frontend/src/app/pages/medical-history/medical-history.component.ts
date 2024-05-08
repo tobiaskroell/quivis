@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const MEDICALHISTORY_MOCKDATA = '/assets/mockdata/medicalhistorydata.json';
+const MEDICALHISTORY_MOCKDATA = '/assets/mockdata/medicalhistorymockdata.json';
 
 @Component({
   selector: 'app-medical-history',
@@ -17,9 +17,9 @@ export class MedicalHistoryComponent implements OnInit {
   }
 
   loadEvents() {
-    this.http.get<any[]>(MEDICALHISTORY_MOCKDATA).subscribe(
+    this.http.get<any>(MEDICALHISTORY_MOCKDATA).subscribe(
       data => {
-        this.events = data;
+        this.events = data.entries;
       },
       error => {
         console.error('Error loading events:', error);
