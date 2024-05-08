@@ -13,13 +13,13 @@ export class MedicalHistoryComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.loadEvents();
+    this.loadData();
   }
 
-  loadEvents() {
+  loadData() {
     this.http.get<any>(MEDICALHISTORY_MOCKDATA).subscribe(
       data => {
-        this.events = data.entries;
+        this.events = data.entries.reverse();
       },
       error => {
         console.error('Error loading events:', error);

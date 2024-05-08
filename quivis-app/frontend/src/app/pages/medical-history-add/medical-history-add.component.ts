@@ -15,6 +15,7 @@ export class MedicalHistoryAddComponent {
   text: string = '';
   uploadedFiles: any[] = [];
   showRemove: boolean = false;
+  POST_ROUTE = 'http://localhost:3000/entries';
 
   constructor(
     private router: Router,
@@ -82,7 +83,7 @@ export class MedicalHistoryAddComponent {
 
     try {
       // Send a POST request to save the data
-      await lastValueFrom(this.http.post('http://localhost:3000/entries', data));
+      await lastValueFrom(this.http.post(this.POST_ROUTE, data));
       console.log(`Medical History Entry \"${data.title}\" saved successfully`);
 
       // Navigate to the medical history page after saving the entry
