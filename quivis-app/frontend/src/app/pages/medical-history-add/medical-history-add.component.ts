@@ -69,8 +69,6 @@ export class MedicalHistoryAddComponent {
     );
   }
 
-  
-
   discardEntry() {
     this.router.navigate(['/medical-history']);
   }

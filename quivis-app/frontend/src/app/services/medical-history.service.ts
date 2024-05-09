@@ -21,7 +21,7 @@ export class MedicalHistoryService {
       });
   }
 
-  countEntriesFromPostRoute(): Promise<number> {
+  async countEntriesFromPostRoute(): Promise<number> {
     return new Promise((resolve, reject) => {
       this.http.get(this.POST_ROUTE).subscribe(
         (data: any) => {

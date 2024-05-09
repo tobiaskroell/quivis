@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './medical-history-entry.component.html',
 })
 export class MedicalHistoryEntryComponent implements OnInit {
+
+  // Instantiate an empty medical history entry model
+  // This will be populated with data from the API
   medicalHistoryEntryModel: MedicalHistoryEntryModel = {
     id: 0,
     title: '',
@@ -25,6 +28,7 @@ export class MedicalHistoryEntryComponent implements OnInit {
     this.fetchData();
   }
 
+  // Fetch the data for the entry with the ID specified in the route parameters and populate the medicalHistoryEntryModel
   fetchData() {
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
