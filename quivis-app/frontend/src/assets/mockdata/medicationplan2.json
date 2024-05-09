@@ -1,0 +1,89 @@
+{
+    "Medikationsplan": [
+        {
+            "Patient": {
+                "Vorname": "Maxi",
+                "Nachname": "Mustermann",
+                "Geburtsdatum": "01.01.1960",
+                "Ausgedruckt am": "13.08.2020"
+            },
+            "Ausgedruckt_von": {
+                "Name": "Praxis Dr. Anton HilfDirgut",
+                "Adresse": "Gallenweg 6, Berlin",
+                "Telefon": "030-123456",
+                "E-Mail": "dr_anton_hilfdirgut_alx.net"
+            },
+            "Medikamente": [
+                {
+                    "Wirkstoff": "Bisoprololfumarat Hydrochlorothiazid",
+                    "Handelsname": "Bisoprolol plus 5/12,5 – 1A",
+                    "Starke": "5,0 mg 12,5 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 1,
+                    "Mittags": 0,
+                    "Abends": 0,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stück",
+                    "Hinweise": "Bluthochdruck",
+                    "Grund": ""
+                },
+                {
+                    "Wirkstoff": "Simvastatin",
+                    "Handelsname": "Simvastatin – 1A",
+                    "Starke": "10 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 0,
+                    "Mittags": 0,
+                    "Abends": 1,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stück",
+                    "Hinweise": "Blutfette",
+                    "Grund": ""
+                },
+                {
+                    "Wirkstoff": "Metformin",
+                    "Handelsname": "Metformin Atid",
+                    "Starke": "500 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 1,
+                    "Mittags": 0,
+                    "Abends": 1,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stück",
+                    "Hinweise": "Während oder nach den Mahlzeiten",
+                    "Grund": ""
+                }
+            ],
+            "Zu besonderen Zeiten anzuwendende Medikamente": [
+                {
+                    "Wirkstoff": "Hypromellose",
+                    "Handelsname": "Artelac",
+                    "Starke": "1,92 mg",
+                    "Form": "Einzeldosen-pipetten",
+                    "Morgens": 0,
+                    "Mittags": 0,
+                    "Abends": 0,
+                    "Zur Nacht": 0,
+                    "Einheit": "",
+                    "Hinweise": "Bei Bedarf bis zu dreimal tgl. 1 Tropfen pro Auge. Direkt danach kein Auto fahren!",
+                    "Grund": ""
+                }
+            ],
+            "Selbstmedikation": [
+                {
+                    "Wirkstoff": "Rotschimmelreis (Monacolin)",
+                    "Handelsname": "Roter Reis Extrakt Tabletten",
+                    "Starke": "4,5 mg",
+                    "Form": "Kapseln",
+                    "Morgens": 0,
+                    "Mittags": 0,
+                    "Abends": 0,
+                    "Zur Nacht": 0,
+                    "Einheit": "",
+                    "Hinweise": "Unbedingt absetzen! Verstärken die Wirkung der Tabl. gegen die Blutfette (Simvastatin)",
+                    "Grund": ""
+                }
+            ]
+        }
+    ]
+}

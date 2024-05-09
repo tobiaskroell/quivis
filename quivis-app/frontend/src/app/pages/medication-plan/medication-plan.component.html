@@ -3,6 +3,109 @@
         <div class="card">
             <h4>Medikationsplan</h4>
             <p-tabView>
+                <p-tabPanel header="Aktueller Medikationsplan">
+                    <p-table [value]="medications">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Wirkstoff</th>
+                                <th>Handelsname</th>
+                                <th>Stärke</th>
+                                <th>Form</th>
+                                <th>Morgens</th>
+                                <th>Mittags</th>
+                                <th>Abends</th>
+                                <th>Zur Nacht</th>
+                                <th>Einheit</th>
+                                <th>Hinweise</th>
+                                <th>Grund</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-medication>
+                            <tr>
+                                <td>{{medication.wirkstoff}}</td>
+                                <td>{{medication.handelsname}}</td>
+                                <td>{{medication.staerke}}</td>
+                                <td>{{medication.form}}</td>
+                                <td>{{medication.morgens}}</td>
+                                <td>{{medication.mittags}}</td>
+                                <td>{{medication.abends}}</td>
+                                <td>{{medication.zurNacht}}</td>
+                                <td>{{medication.einheit}}</td>
+                                <td>{{medication.hinweise}}</td>
+                                <td>{{medication.grund}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                    <h5>Zu besonderen Zeiten anzuwendende Medikamente</h5>
+                    <p-table [value]="specialMedications">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Wirkstoff</th>
+                                <th>Handelsname</th>
+                                <th>Stärke</th>
+                                <th>Form</th>
+                                <th>Morgens</th>
+                                <th>Mittags</th>
+                                <th>Abends</th>
+                                <th>Zur Nacht</th>
+                                <th>Einheit</th>
+                                <th>Hinweise</th>
+                                <th>Grund</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-medication>
+                            <tr>
+                                <td>{{medication.wirkstoff}}</td>
+                                <td>{{medication.handelsname}}</td>
+                                <td>{{medication.staerke}}</td>
+                                <td>{{medication.form}}</td>
+                                <td>{{medication.morgens}}</td>
+                                <td>{{medication.mittags}}</td>
+                                <td>{{medication.abends}}</td>
+                                <td>{{medication.zurNacht}}</td>
+                                <td>{{medication.einheit}}</td>
+                                <td>{{medication.hinweise}}</td>
+                                <td>{{medication.grund}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+
+                    <h5>Selbstmedikation</h5>
+                    <p-table [value]="selfMedications">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Wirkstoff</th>
+                                <th>Handelsname</th>
+                                <th>Stärke</th>
+                                <th>Form</th>
+                                <th>Morgens</th>
+                                <th>Mittags</th>
+                                <th>Abends</th>
+                                <th>Zur Nacht</th>
+                                <th>Einheit</th>
+                                <th>Hinweise</th>
+                                <th>Grund</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-medication>
+                            <tr>
+                                <td>{{medication.wirkstoff}}</td>
+                                <td>{{medication.handelsname}}</td>
+                                <td>{{medication.staerke}}</td>
+                                <td>{{medication.form}}</td>
+                                <td>{{medication.morgens}}</td>
+                                <td>{{medication.mittags}}</td>
+                                <td>{{medication.abends}}</td>
+                                <td>{{medication.zurNacht}}</td>
+                                <td>{{medication.einheit}}</td>
+                                <td>{{medication.hinweise}}</td>
+                                <td>{{medication.grund}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+
+                </p-tabPanel>
+
                 <p-tabPanel header="Dateien">
                     <p-table [value]="uploadedFiles" [scrollable]="true" scrollHeight="300px">
                         <ng-template pTemplate="header">
@@ -24,10 +127,11 @@
                         </ng-template>
                     </p-table>
                 </p-tabPanel>
+
                 <p-tabPanel header="Upload">
                     <p-fileUpload #fileUploader name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
-                        [customUpload]="true" [multiple]="false" (onSelect)="onUpload($event)"
-                        [showUploadButton]="true" [showCancelButton]="false" [auto]="true"
+                        [customUpload]="true" [multiple]="false" (onSelect)="onUpload($event)" [showUploadButton]="true"
+                        [showCancelButton]="false" [auto]="true"
                         styleClass="border-1 surface-border surface-card border-round" chooseLabel="Auswählen">
                         <ng-template pTemplate="content">
                             <div class="h-10rem overflow-y-auto py-3 border-round" style="cursor: copy" (click)="
@@ -43,24 +147,30 @@
                                         style="padding: 1px">
 
                                         <i class="pi pi-file text-4xl text-primary"></i>
-                                        <span class="block font-semibold text-900 text-sm mt-2">{{ uploadedFile.name }}</span>
+                                        <span class="block font-semibold text-900 text-sm mt-2">{{ uploadedFile.name
+                                            }}</span>
                                         <button #buttonEl pButton pRipple type="button" icon="pi pi-times"
                                             class="p-button-rounded p-button-primary text-sm absolute justify-content-center align-items-center cursor-pointer w-1.5rem h-1.5rem"
                                             style="
                                                         top: -8px;
                                                         right: -8px;
-                                                        display: none;" (click)="$event.stopPropagation(); removeFile()">
+                                                        display: none;"
+                                            (click)="$event.stopPropagation(); removeFile()">
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </ng-template>
                     </p-fileUpload>
+
                     <div class="flex justify-content-end mt-4">
-                        <button pButton pRipple label="Verwerfen" icon="pi pi-times" class="p-button-text" (click)="discardEntry()"></button>
-                        <button pButton pRipple label="Speichern" icon="pi pi-check" class="ml-2" (click)="onAddFile()"></button>
+                        <button pButton pRipple label="Verwerfen" icon="pi pi-times" class="p-button-text"
+                            (click)="discardEntry()"></button>
+                        <button pButton pRipple label="Speichern" icon="pi pi-check" class="ml-2"
+                            (click)="onAddFile()"></button>
                     </div>
                 </p-tabPanel>
+
             </p-tabView>
         </div>
     </div>

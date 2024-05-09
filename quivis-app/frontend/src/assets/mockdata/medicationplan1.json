@@ -1,0 +1,89 @@
+{
+    "Medikationsplan": [
+        {
+            "Patient": {
+                "Vorname": "Martin",
+                "Nachname": "Muster",
+                "Geburtsdatum": "03.04.1987",
+                "Ausgedruckt am": "13.08.2020"
+            },
+            "Ausgedruckt_von": {
+                "Name": "Praxis Dr. Beta Gamma",
+                "Adresse": "Korkstr. 3, Hambur",
+                "Telefon": "040-111222333",
+                "E-Mail": "dr_mach_mal_fertig@xmg.net"
+            },
+            "Medikamente": [
+                {
+                    "Wirkstoff": "Aspirin",
+                    "Handelsname": "Simvastatin - 1A",
+                    "Starke": "12,0 mg 45,5 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 1,
+                    "Mittags": 0,
+                    "Abends": 0,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stk",
+                    "Hinweise": "Blutfettsenker",
+                    "Grund": "Schmerzen"
+                },
+                {
+                    "Wirkstoff": "Atorvastatin",
+                    "Handelsname": "Atorvastatin - 2A",
+                    "Starke": "13 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 0,
+                    "Mittags": 0,
+                    "Abends": 1,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stk",
+                    "Hinweise": "Keine",
+                    "Grund": "Schmerzen"
+                },
+                {
+                    "Wirkstoff": "Hydrocodon",
+                    "Handelsname": "Hydrocodon Atid",
+                    "Starke": "500 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 1,
+                    "Mittags": 0,
+                    "Abends": 1,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stk",
+                    "Hinweise": "Wahrend oder nach den Mahlzeiten mit reichlich Flussigkeit einnehmen",
+                    "Grund": ""
+                }
+            ],
+            "Zu besonderen Zeiten anzuwendende Medikamente": [
+                {
+                    "Wirkstoff": "Amlodipin",
+                    "Handelsname": "Amlodipin Atid",
+                    "Starke": "4 mg",
+                    "Form": "Filmtabl.",
+                    "Morgens": 1,
+                    "Mittags": 1,
+                    "Abends": 1,
+                    "Zur Nacht": 1,
+                    "Einheit": "Stk",
+                    "Hinweise": "Hypertonie",
+                    "Grund": ""
+                }
+            ],
+            "Selbstmedikation": [
+                {
+                    "Wirkstoff": "Metamizol",
+                    "Handelsname": "Metamizol",
+                    "Starke": "10 mg",
+                    "Form": "Pipettenflasche",
+                    "Morgens": 0,
+                    "Mittags": 1,
+                    "Abends": 0,
+                    "Zur Nacht": 0,
+                    "Einheit": "Stk",
+                    "Hinweise": "nicht-opioides Analgetikum",
+                    "Grund": ""
+                }
+            ]
+        }
+    ]
+}
