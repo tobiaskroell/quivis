@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class FileService {
-  POST_ROUTE = 'http://localhost:3000/entries';
+  POST_ROUTE = 'http://localhost:3000/files';
   numEntries: number = 0;
 
   constructor(private http: HttpClient, private router: Router) {

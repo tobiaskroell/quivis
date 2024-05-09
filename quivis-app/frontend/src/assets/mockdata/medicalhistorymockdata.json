@@ -34,8 +34,15 @@
       "id": "6",
       "title": "Medikamente",
       "date": "01.02.2020",
-      "text": "Neue Medikation: \n\n- Medikament 1: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 2: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 3: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n\nDie oben genannten Medikamente wurden dem Patienten verschrieben, um [Zweck der Medikation]. Es ist wichtig, dass der Patient die Medikamente gemäß den Anweisungen einnimmt und alle erforderlichen Vorsichtsmaßnahmen beachtet. Bei auftretenden Nebenwirkungen oder Problemen sollte der Patient sofort seinen Arzt informieren."    
+      "text": "Neue Medikation: \n\n- Medikament 1: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 2: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 3: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n\nDie oben genannten Medikamente wurden dem Patienten verschrieben, um [Zweck der Medikation]. Es ist wichtig, dass der Patient die Medikamente gemäß den Anweisungen einnimmt und alle erforderlichen Vorsichtsmaßnahmen beachtet. Bei auftretenden Nebenwirkungen oder Problemen sollte der Patient sofort seinen Arzt informieren."
     }
-    
+  ],
+  "files": [
+    {
+      "id": "4f83",
+      "name": "Textdokument (neu).txt",
+      "objectURL": "",
+      "uploadDate": "2024-05-09T08:24:08.861Z"
+    }
   ]
 }
