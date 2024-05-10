@@ -29,13 +29,13 @@ const routes: Routes = [
                         (m) => m.HelpModule
                     ),
             },
-            {
-                path: 'lab-reports',
-                loadChildren: () =>
-                    import('./pages/lab-reports/lab-reports.module').then(
-                        (m) => m.LabReportsModule
-                    ),
-            },
+            // {
+            //     path: 'lab-reports',
+            //     loadChildren: () =>
+            //         import('./pages/lab-reports/lab-reports.module').then(
+            //             (m) => m.LabReportsModule
+            //         ),
+            // },
             {
                 path: 'landing',
                 loadChildren: () =>
@@ -73,6 +73,14 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./pages/medical-history-add/medical-history-add.module').then(
                         (m) => m.MedicalHistoryAddModule
+                    ),
+
+            },
+            {
+                path: 'ask-claude',
+                loadChildren: () =>
+                    import('./pages/ask-claude/ask-claude.module').then(
+                        (m) => m.AskClaudeModule
                     ),
 
             }

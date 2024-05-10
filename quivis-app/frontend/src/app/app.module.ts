@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
 import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
-import { LabReportsRoutingModule } from './pages/lab-reports/lab-reports-routing.module';
+// import { LabReportsRoutingModule } from './pages/lab-reports/lab-reports-routing.module';
 import { MedicalHistoryRoutingModule } from './pages/medical-history/medical-history-routing.module';
 import { MedicationPlanRoutingModule } from './pages/medication-plan/medication-plan-routing.module';
 import { NutritionalDiaryRoutingModule } from './pages/nutritional-diary/nutritional-diary-routing.module';
@@ -23,6 +23,8 @@ import { MedicalHistoryAddModule } from './pages/medical-history-add/medical-his
 import { MedicalHistoryEntryModule } from './pages/medical-history-entry/medical-history-entry.module';
 import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/medical-history-entry-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AskClaudeModule } from './pages/ask-claude/ask-claude.module';
+import { AskClaudeRoutingModule } from './pages/ask-claude/ask-claude-routing.module';
 
 @NgModule({
     declarations: [
@@ -32,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         AppLayoutModule,
         DashboardRoutingModule,
-        LabReportsRoutingModule,
+        // LabReportsRoutingModule,
         MedicalHistoryRoutingModule,
         MedicationPlanRoutingModule,
         NutritionalDiaryRoutingModule,
@@ -50,7 +52,9 @@ import { HttpClientModule } from '@angular/common/http';
         MedicalHistoryAddModule,
         MedicalHistoryEntryModule,
         MedicalHistoryEntryRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        AskClaudeModule,
+        AskClaudeRoutingModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },

@@ -24,21 +24,21 @@ export class AppMenuComponent implements OnInit {
                         icon: 'pi pi-fw pi-comments',
                         routerLink: ['/medication-plan'],
                     },
-                    {
-                        label: 'Laborberichte',
-                        icon: 'pi pi-fw pi-folder',
-                        routerLink: ['/lab-reports'],
-                    },
-                    {
-                        label: 'Ernährungstagebuch',
-                        icon: 'pi pi-fw pi-sliders-v',
-                        routerLink: ['/nutritional-diary'],
-                    },
                     // {
-                    //     label: 'LLM-Assist',
-                    //     icon: 'pi pi-fw pi-check-square',
-                    //     routerLink: ['/llm-assist'],
+                    //     label: 'Laborberichte',
+                    //     icon: 'pi pi-fw pi-folder',
+                    //     routerLink: ['/lab-reports'],
                     // },
+                    // {
+                    //     label: 'Ernährungstagebuch',
+                    //     icon: 'pi pi-fw pi-sliders-v',
+                    //     routerLink: ['/nutritional-diary'],
+                    // },
+                    {
+                        label: 'Frag Claude',
+                        icon: 'pi pi-fw pi-check-square',
+                        routerLink: ['/ask-claude'],
+                    },
                 ],
             },
 
