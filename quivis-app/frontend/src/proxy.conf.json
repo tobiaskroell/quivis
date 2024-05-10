@@ -1,0 +1,6 @@
+{
+    "/v1/messages": {
+        "target": "https://api.anthropic.com",
+        "secure": false
+    }
+}

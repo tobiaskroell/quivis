@@ -68,7 +68,8 @@
                             "buildTarget": "poseidon-ng:build:production"
                         },
                         "development": {
-                            "buildTarget": "poseidon-ng:build:development"
+                            "buildTarget": "poseidon-ng:build:development",
+                            "proxyConfig": "src/proxy.conf.json"
                         }
                     },
                     "defaultConfiguration": "development"
