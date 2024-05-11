@@ -9,8 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MedicalHistoryEntryComponent implements OnInit {
 
-  // Instantiate an empty medical history entry model
-  // This will be populated with data from the API
+  // Instantiate an empty medical history entry model. This will be populated with data from the API
   medicalHistoryEntryModel: MedicalHistoryEntryModel = {
     id: 0,
     title: '',

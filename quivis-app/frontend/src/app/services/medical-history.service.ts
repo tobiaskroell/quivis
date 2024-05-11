@@ -20,7 +20,7 @@ export class MedicalHistoryService {
         console.error(error);
       });
   }
-
+  // Count the number of entries in the JSON data to determine the ID of the next entry
   async countEntriesFromPostRoute(): Promise<number> {
     return new Promise((resolve, reject) => {
       this.http.get(this.POST_ROUTE).subscribe(
@@ -37,11 +37,6 @@ export class MedicalHistoryService {
       );
     });
   }
-
-  // Returns an instance of Observable. In this case this.http.get(this.url + '/users'); is the Observable.
-  // getUsers(): Observable<any> {
-  //   return this.http.get(this.url + '/entries');
-  // }
 
   async saveEntry(id: number, title: string, date: string, text: string, images: any): Promise<void> {
     console.log('Anzahl Eintrage in JSON:', this.numEntries);

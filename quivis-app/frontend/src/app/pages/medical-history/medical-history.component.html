@@ -1,8 +1,9 @@
 <div class="grid">
     <div class="col-12">
         <div class="card">
-            <h4>Medizinische Historie</h4>
-            <p-button label="Neuer Eintrag" [routerLink]="['/medical-history-add']"></p-button>
+            <h3 style="padding: 20px; padding-top: 30px; text-align: center;">Medizinische Historie</h3>
+            <div style="text-align: center;"><p-button label="Neuer Eintrag" [routerLink]="['/medical-history-add']"></p-button></div>
+            
             <br><br>
             <p-timeline [value]="entries" align="alternate" styleClass="customized-timeline">
                 <ng-template pTemplate="marker" let-event>
