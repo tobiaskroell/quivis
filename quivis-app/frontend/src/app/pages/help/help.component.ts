@@ -37,10 +37,10 @@ export class HelpComponent implements OnInit {
 
         this.answers = [
             {
-                'Dashboard': 'Das Dashboard ist die Startseite von Quivis. Hier finden Sie alle wichtigen Informationen auf einen Blick. Sie können Ihre Medikamente eintragen, Ihre Medizinische Historie einsehen und mit Claude chatten.',
-                'Medizinische Historie': 'In der Medizinischen Historie können Sie alle Ihre Arztbesuche, Diagnosen und Behandlungen eintragen. So haben Sie alle wichtigen Informationen immer griffbereit.',
-                'Medikationsplan': 'Im Medikationsplan können Sie alle Ihre Medikamente eintragen. Sie können die Dosierung, die Einnahmezeit und die Dauer der Einnahme festlegen. So haben Sie immer im Blick, wann Sie welche Medikamente einnehmen müssen.',
-                'Frag Claude': 'Claude ist Ihr persönlicher Gesundheitsassistent. Sie können ihm alle Fragen rund um Ihre Gesundheit stellen und er wird Ihnen mit Rat und Tat zur Seite stehen.'
+                'Dashboard': 'Das Dashboard ist die Startseite von Quivis. Hier findest du alle wichtigen Informationen auf einen Blick. Navigiere zu den einzelnen Modulen, um deine Gesundheitsdaten zu verwalten.',
+                'Medizinische Historie': 'In der Medizinischen Historie kannst du alle deine Arztbesuche, Diagnosen und Behandlungen eintragen. So hast du alle wichtigen Informationen immer griffbereit.',
+                'Medikationsplan': 'Im Medikationsplan kannst du alle deine Medikamente eintragen. Nutze dafür einfach die Upload-Funktion, um ein Foto deines Medikamentenplans hochzuladen. Dieser wird dann automatisch in den Medikationsplan übertragen, sodass du diesen auch an Claude weitergeben kannst.',
+                'Frag Claude': 'Frag Claude ist eine Möglichkeit, deine Gesundheitsdaten an das KI-Sprachmodell Claude zu Übertragen. Basierend auf deinen Daten kannst du Claude zu Diagnosen, Medikationen o.Ä. befragen. Claude wird dir dann eine Antwort geben, die auf deinen Daten basiert.'
             },
             {
                 'Was ist Quivis?': 'Quivis ist eine Plattform, um deine Gesundheitsdaten zu speichern und zu verwalten. Mit Quivis kannst du deine medizinische Historie in das Sprachmodell Claude einlesen und als ergänzenden Ideengeber verwenden, um dein Verständnis zu vertiefen und deine Gesprächsgrundlage mit Ärzten zu erweitern.',
