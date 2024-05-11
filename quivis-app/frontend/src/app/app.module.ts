@@ -3,7 +3,7 @@ import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
-import { DashboardRoutingModule } from './pages/dashboard/dashboard-routing.module';
+import { HomeRoutingModule } from './pages/home/home-routing.module';
 // import { LabReportsRoutingModule } from './pages/lab-reports/lab-reports-routing.module';
 import { MedicalHistoryRoutingModule } from './pages/medical-history/medical-history-routing.module';
 import { MedicationPlanRoutingModule } from './pages/medication-plan/medication-plan-routing.module';
@@ -33,7 +33,7 @@ import { AskClaudeRoutingModule } from './pages/ask-claude/ask-claude-routing.mo
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        DashboardRoutingModule,
+        HomeRoutingModule,
         // LabReportsRoutingModule,
         MedicalHistoryRoutingModule,
         MedicationPlanRoutingModule,

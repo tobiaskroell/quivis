@@ -1,0 +1,54 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <h3 style="padding: 30px; padding-top: 30px; text-align: center;">Willkommen bei Quivis!</h3>
+            <p-dataView #dv [value]="products" [rows]="9" layout="grid">
+                <ng-template let-product pTemplate="gridItem">
+                    <div class="grid grid-nogutter">
+                        <div class="col-12 md:col-4">
+                            <div class="flex flex-column align-items-center text-center mb-3">
+                                <a [routerLink]="['/medical-history']" class="card m-3 border-1 surface-border">
+                                    <img [src]="'assets/demo/images/product/grey-t-shirt.jpg' " [alt]="product.name"
+                                        class="w-9 shadow-2 my-3 mx-0" />
+                                    <div class="text-2xl font-bold">Medizinische Historie</div>
+                                </a>
+                                <div class="m-3">In der Medizinischen Historie kannst du alle deine Arztbesuche,
+                                    Diagnosen und Behandlungen eintragen. So hast du alle wichtigen Informationen immer
+                                    griffbereit.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 md:col-4">
+                            <div class="flex flex-column align-items-center text-center mb-3">
+                                <a [routerLink]="['/medical-history']" class="card m-3 border-1 surface-border">
+                                    <img [src]="'assets/demo/images/product/yellow-earbuds.jpg' " [alt]="product.name"
+                                        class="w-9 shadow-2 my-3 mx-0" />
+                                    <div class="text-2xl font-bold">Medikationsplan</div>
+                                </a>
+                                <div class="m-3">Im Medikationsplan kannst du alle deine Medikamente eintragen. Nutze
+                                    dafür einfach die Upload-Funktion, um ein Foto deines Medikamentenplans hochzuladen.
+                                    Dieser wird dann automatisch in den Medikationsplan übertragen, sodass du diesen
+                                    auch an Claude weitergeben kannst.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 md:col-4">
+                            <div class="flex flex-column align-items-center text-center mb-3">
+                                <a [routerLink]="['/medical-history']" class="card m-3 border-1 surface-border">
+                                    <img [src]="'assets/demo/images/product/gaming-set.jpg' " [alt]="product.name"
+                                        class="w-9 shadow-2 my-3 mx-0" />
+                                    <div class="text-2xl font-bold">Frag Claude</div>
+                                </a>
+                                <div class="m-3">Frag Claude ist eine Möglichkeit, deine Gesundheitsdaten an das
+                                    KI-Sprachmodell Claude zu Übertragen. Basierend auf deinen Daten kannst du Claude zu
+                                    Diagnosen, Medikationen o.Ä. befragen. Claude wird dir dann eine Antwort geben, die
+                                    auf deinen Daten basiert.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </ng-template>
+            </p-dataView>
+        </div>
+    </div>
+</div>

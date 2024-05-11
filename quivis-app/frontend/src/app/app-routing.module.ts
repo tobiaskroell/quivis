@@ -18,8 +18,8 @@ const routes: Routes = [
             {
                 path: '',
                 loadChildren: () =>
-                    import('./pages/dashboard/dashboard.module').then(
-                        (m) => m.DashboardModule
+                    import('./pages/home/home.module').then(
+                        (m) => m.HomeModule
                     ),
             },
             {
