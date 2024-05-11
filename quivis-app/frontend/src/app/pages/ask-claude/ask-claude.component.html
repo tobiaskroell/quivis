@@ -1,41 +1,45 @@
 <div class="grid">
     <div class="col-12">
         <div class="card" style="padding: 0 40px;">
-            <h4 style="padding-top: 40px;">Frag Claude</h4>
-            <div style="background-color: #ffdddd; padding: 20px; margin-bottom: 10px;">
-                <p><b>Bitte beachte, dass die Nutzung dieses Systems keinesfalls eine professionelle medizinische
-                        Beratung oder Behandlung ersetzen kann. Claude dient lediglich als ergänzender Ideengeber, um
+            <h3 style="padding: 20px; padding-top: 30px; text-align: center;">Frag Claude</h3>
+            <div style="background-color: #ffdddd; padding: 20px; margin-bottom: 10px; text-align: center;">
+                <p><b>Bitte beachte, dass die Nutzung dieses Systems lediglich eine Demo-Anwendung darstellt und
+                        keinesfalls eine professionelle medizinische
+                        Beratung oder Behandlung ersetzen kann. Das Claude-Modul dient lediglich als ergänzender
+                        Ideengeber, um
                         dein Verständnis zu vertiefen und deine Gesprächsgrundlage mit Ärzten zu erweitern. Letztendlich
                         solltest du dich für alle medizinischen Entscheidungen auf die Expertise von zugelassenen Ärzten
                         verlassen.</b>
                 </p>
             </div>
-            <div style="padding: 20px; margin-bottom: 10px;"></div>
-            <p>Hier findest du eine Schnittstelle für das KI-basierte Sprachmodell Claude von Anthropic. Mit dem Klick
-                auf den Button „Medizinische Historie senden" kann die medizinische Historie an Claude übertragen werden
-                und es können Fragen diesbezüglich an Claude gestellt werden.
-            </p>
-            <p>Claude, ist ein hochentwickeltes Sprachmodell und verfügt über die Möglichkeit auf Basis der gegebenen
-                medizinischen Historie Ideen, Einschätzungen und Empfehlungen zu geben. Dies kann zum Beispiel die
-                Interpretation von Testergebnissen, mögliche Diagnosen oder Behandlungsoptionen sein.</p>
+            <div style="background-color: #ffffff; padding: 20px; margin-bottom: 10px; text-align: center;">
+                <p>Hier findest du eine Schnittstelle für das KI-basierte Sprachmodell Claude von Anthropic. Mit dem
+                    Klick auf den Button „Medizinische Historie senden" kann die medizinische Historie an Claude
+                    übertragen werden und es können Fragen diesbezüglich an Claude gestellt werden.
+                </p>
+                <p>Claude, ist ein hochentwickeltes Sprachmodell und verfügt über die Möglichkeit auf Basis der
+                    gegebenen medizinischen Historie Ideen, Einschätzungen und Empfehlungen zu geben. Das kann zum
+                    Beispiel die Interpretation von Testergebnissen, mögliche Diagnosen oder Behandlungsoptionen sein. 
+                </p>
+                <p></p>
+            </div>
             <hr>
             <br>
             <div class="grid" style="margin-top: 20px; text-align: center;">
                 <div class="col-12">
 
                     <span class="p-float-label">
-                        <textarea rows="12" cols="90" pInputTextarea [(ngModel)]="value"></textarea>
+                        <textarea rows="16" cols="90" pInputTextarea [(ngModel)]="textAreaClaudeResponse" readonly="true"></textarea>
                         <br>
                         <br>
-                        <textarea [autoResize]="true" rows="1" cols="92" pInputTextarea [(ngModel)]="value2"></textarea>
+                        <textarea pInputTextarea [(ngModel)]="textAreaUserInput" [rows]="5" [cols]="90" [autoResize]="false" placeholder="Frage eingeben"></textarea>
                     </span>
                 </div>
                 <div class="col-12" style="padding-bottom: 40px;">
-                    <p-button label="Frag Claude"></p-button>
+                    <p-button label="Frag Claude" (onClick)="promptClaude()"></p-button>
                 </div>
 
                 <div class="col-9">
-                    <p-button label="Button 2"></p-button>
                 </div>
                 <div class="col-12">
                 </div>
@@ -43,8 +47,7 @@
 
             <br>
 
-            <p-button label="Click" (onClick)="promptClaude()"></p-button>
-            <p>{{ claudeResponse.text }}</p>
+            <p></p>
         </div>
     </div>
 </div>

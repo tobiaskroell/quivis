@@ -10,8 +10,11 @@ import { ClaudeService } from 'src/app/services/claude.service';
 
 export class AskClaudeComponent {
   answer: string = '';
-  value: string = ''; 
-  value2: string = ''; 
+  textAreaClaudeResponse: string = '';
+  textAreaUserInput: string = '';
+  maxLength = 500;
+  autoResize = true;
+
 
   claudeResponse = {
     text: '',
@@ -19,10 +22,11 @@ export class AskClaudeComponent {
     usage: ''
   }
 
-  constructor(private claudeService: ClaudeService) {}
+  constructor(private claudeService: ClaudeService) { }
 
   async promptClaude() {
-    this.claudeResponse = await this.claudeService.getAnswer('I ate a salad for lunch today');
+    this.claudeResponse = await this.claudeService.getAnswer(this.textAreaUserInput);
+    this.textAreaClaudeResponse = this.claudeResponse.text;
   }
-  
+
 }
