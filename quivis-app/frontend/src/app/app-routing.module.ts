@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AppLayoutComponent } from './layout/app.layout.component';
-import { NutritionalDiaryComponent } from './pages/nutritional-diary/nutritional-diary.component';
 import { MedicalHistoryEntryComponent } from './pages/medical-history-entry/medical-history-entry.component';
 
 const routerOptions: ExtraOptions = {
@@ -81,6 +80,14 @@ const routes: Routes = [
                 loadChildren: () =>
                     import('./pages/ask-claude/ask-claude.module').then(
                         (m) => m.AskClaudeModule
+                    ),
+
+            },
+            {
+                path: 'profile',
+                loadChildren: () =>
+                    import('./pages/profile/profile.module').then(
+                        (m) => m.ProfileModule
                     ),
 
             }

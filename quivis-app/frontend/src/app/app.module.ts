@@ -25,6 +25,8 @@ import { MedicalHistoryEntryRoutingModule } from './pages/medical-history-entry/
 import { HttpClientModule } from '@angular/common/http';
 import { AskClaudeModule } from './pages/ask-claude/ask-claude.module';
 import { AskClaudeRoutingModule } from './pages/ask-claude/ask-claude-routing.module';
+import { ProfileModule } from './pages/profile/profile.module';
+import { ProfileRoutingModule } from './pages/profile/profile-routing.module';
 
 @NgModule({
     declarations: [
@@ -54,7 +56,9 @@ import { AskClaudeRoutingModule } from './pages/ask-claude/ask-claude-routing.mo
         MedicalHistoryEntryRoutingModule,
         HttpClientModule,
         AskClaudeModule,
-        AskClaudeRoutingModule
+        AskClaudeRoutingModule,
+        ProfileModule,
+        ProfileRoutingModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
