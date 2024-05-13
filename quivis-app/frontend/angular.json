@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "poseidon-ng": {
+        "quivis-ng": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/poseidon-ng",
+                        "outputPath": "dist/quivis-ng",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "poseidon-ng:build:production"
+                            "buildTarget": "quivis-ng:build:production"
                         },
                         "development": {
-                            "buildTarget": "poseidon-ng:build:development",
+                            "buildTarget": "quivis-ng:build:development",
                             "proxyConfig": "src/proxy.conf.json"
                         }
                     },
@@ -77,7 +77,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "buildTarget": "poseidon-ng:build"
+                        "buildTarget": "quivis-ng:build"
                     }
                 },
                 "test": {
