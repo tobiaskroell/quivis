@@ -18,9 +18,10 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      username: ['', Validators.required],
       email: ['', [Validators.email]],
-      password: [''],
+      firstName: [''],
+      lastName: [''],
       birthDate: [''],
 
     });
@@ -36,7 +37,7 @@ export class ProfileComponent implements OnInit {
       // this.saveProfileData(this.profileForm.value);
 
       this.messageService.add({
-        severity: 'info',
+        severity: 'success',
         summary: 'Success',
         detail: 'Profile updated successfully'
       });
