@@ -1,10 +1,10 @@
-package com.quivis.quivis;
+package com.quivis.quivisapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QuivisApplicationTests {
+class QuivisappApplicationTests {
 
 	@Test
 	void contextLoads() {
