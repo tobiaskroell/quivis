@@ -1,6 +1,5 @@
 package com.quivis.quivisapp.medicalhistory;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.Optional;
 @RequestMapping("/customers")
 public class MedicalHistoryController {
 
-    @Autowired
-    private MedicalHistoryService medicalHistoryService;
+    private final MedicalHistoryService medicalHistoryService;
+
+    public MedicalHistoryController(MedicalHistoryService medicalHistoryService) {
+        this.medicalHistoryService = medicalHistoryService;
+    }
 
     @GetMapping
     public List<MedicalHistoryEntry> getAllEntries() {

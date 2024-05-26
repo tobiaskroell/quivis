@@ -1,7 +1,6 @@
 package com.quivis.quivisapp.medicalhistory;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,8 +9,11 @@ import java.util.Optional;
 @Service
 public class MedicalHistoryService {
 
-    @Autowired
-    private MedicalHistoryRepository medicalHistoryRepository;
+    private final MedicalHistoryRepository medicalHistoryRepository;
+
+    public MedicalHistoryService(MedicalHistoryRepository medicalHistoryRepository) {
+        this.medicalHistoryRepository = medicalHistoryRepository;
+    }
 
     public List<MedicalHistoryEntry> getAllMedicalHistoryEntries() {
         return medicalHistoryRepository.findAll(); // Returns always a list of MedicalHistoryEntry objects (could be empty), no null check needed.
