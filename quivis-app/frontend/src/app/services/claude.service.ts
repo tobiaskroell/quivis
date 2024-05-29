@@ -17,7 +17,7 @@ export class ClaudeService {
     const claude3Opus = 'claude-3-opus-20240229';
 
     const anthropic = new Anthropic({
-      apiKey: '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', // defaults to process.env["ANTHROPIC_API_KEY"]
+      apiKey: '', // defaults to process.env["ANTHROPIC_API_KEY"]
     });
 
     // https://docs.anthropic.com/claude/docs/models-overview
