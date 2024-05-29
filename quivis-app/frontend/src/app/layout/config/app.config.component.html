@@ -51,15 +51,6 @@
                     ></p-radioButton>
                     <label for="light" >Light</label>
                 </div>
-                <div class="field-radiobutton flex-1">
-                    <p-radioButton
-                        name="colorScheme"
-                        value="dark"
-                        [(ngModel)]="colorScheme"
-                        inputId="dark"
-                    ></p-radioButton>
-                    <label for="dark" >Dark</label>
-                </div>
 
                 <div class="field-radiobutton flex-1">
                     <p-radioButton
@@ -72,6 +63,7 @@
                 </div>
             </div>
 
+            <!--
             <ng-container *ngIf="!minimal">
                 <h5>Menu Themes</h5>
                 <div class="flex gap-4">
@@ -92,7 +84,7 @@
                     </div>
                 </div>
 
-                <h5>Topbar Themes</h5>
+                 <h5>Topbar Themes</h5>
                 <div class="flex gap-4">
                     <div
                         class="field-radiobutton flex-1"
@@ -109,10 +101,10 @@
                             theme.name | titlecase
                         }}</label>
                     </div>
-                </div>
-            </ng-container>
+                </div> 
+            </ng-container> -->
 
-            <ng-container *ngIf="!minimal">
+            <!-- <ng-container *ngIf="!minimal">
                 <h5>Menu Mode</h5>
                 <div class="flex flex-wrap row-gap-3">
                     <div class="flex align-items-center gap-2 w-6">
@@ -149,9 +141,10 @@
                         >
                     </div>
                 </div>
-            </ng-container>
+            </ng-container> -->
 
-            <ng-container *ngIf="!minimal">
+
+            <!-- <ng-container *ngIf="!minimal">
                 <h5>Input Style</h5>
                 <div class="flex gap-4">
                     <div class="field-radiobutton flex-1">
@@ -177,15 +170,15 @@
                         >
                     </div>
                 </div>
-            </ng-container>
+            </ng-container> -->
 
-            <h5>Ripple Effect</h5>
+            <!-- <h5>Ripple Effect</h5>
             <p-inputSwitch
                 [(ngModel)]="ripple"
                 styleClass="mb-3"
-            ></p-inputSwitch>
+            ></p-inputSwitch> -->
             
-            <h5>Component Themes</h5>
+            <!-- <h5>Component Themes</h5>
             <div class="flex flex-wrap row-gap-3">
                 <div class="w-3" *ngFor="let theme of componentThemes">
                     <button
@@ -208,7 +201,7 @@
                         ></i>
                     </button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </p-sidebar>
 </div>

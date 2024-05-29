@@ -13,63 +13,6 @@
 
         <div class="layout-topbar-actions-end">
             <ul class="layout-topbar-items">
-                <li>
-                    <a pStyleClass="@next" enterFromClass="hidden" enterActiveClass="scalein" leaveToClass="hidden"
-                        leaveActiveClass="fadeout" [hideOnOutsideClick]="true" pRipple>
-                        <i class="pi pi-cog"></i>
-                    </a>
-                    <div class="layout-topbar-menu shadow-2 pt-0 hidden cursor-pointer">
-                        <ul class="list-none p-0 m-0">
-                            <li class="flex justify-content-between align-items-center px-3 p-3 mb-3">
-                                <h6 class="m-0 font-semibold">Settings</h6>
-                            </li>
-                            <li>
-                                <a class="py-2 px-3 flex gap-2 align-items-center cursor-pointer">
-                                    <div class="flex align-items-center justify-content-center border-1 border-circle border-transparent bg-blue-100 text-500"
-                                        style="height: 30px; width: 30px">
-                                        <i class="pi pi-user text-lg text-blue-500"></i>
-                                    </div>
-                                    <h6 class="m-0 font-semibold">
-                                        Account Info
-                                    </h6>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="py-2 px-3 flex gap-2 align-items-center cursor-pointer">
-                                    <div class="flex align-items-center justify-content-center border-1 border-circle border-transparent bg-cyan-100 text-500"
-                                        style="height: 30px; width: 30px">
-                                        <i class="pi pi-users text-lg text-cyan-500"></i>
-                                    </div>
-                                    <h6 class="m-0 font-semibold">
-                                        Global Accounts
-                                    </h6>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="py-2 px-3 flex gap-2 align-items-center cursor-pointer">
-                                    <div class="flex align-items-center justify-content-center border-1 border-circle border-transparent bg-pink-100 text-500"
-                                        style="height: 30px; width: 30px">
-                                        <i class="pi pi-bell text-lg text-pink-500"></i>
-                                    </div>
-                                    <h6 class="m-0 font-semibold">
-                                        Notification Preferences
-                                    </h6>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="py-2 px-3 flex gap-2 align-items-center cursor-pointer">
-                                    <div class="flex align-items-center justify-content-center border-1 border-circle border-transparent bg-blue-100 text-500"
-                                        style="height: 30px; width: 30px">
-                                        <i class="pi pi-lock text-lg text-blue-500"></i>
-                                    </div>
-                                    <h6 class="m-0 font-semibold">
-                                        Login Settings
-                                    </h6>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
                 <li class="layout-topbar-profile">
                     <a *ngIf="!layoutService.isMobile()" pStyleClass="@next" enterFromClass="hidden"
                         enterActiveClass="scalein" leaveToClass="hidden" leaveActiveClass="fadeout"
