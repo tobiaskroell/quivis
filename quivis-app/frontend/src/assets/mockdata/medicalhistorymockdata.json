@@ -35,6 +35,13 @@
       "title": "Medikamente",
       "date": "01.02.2020",
       "text": "Neue Medikation: \n\n- Medikament 1: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 2: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n- Medikament 3: [Name des Medikaments], Dosierung: [Dosierung], Anwendung: [Anwendungshinweise]\n\nDie oben genannten Medikamente wurden dem Patienten verschrieben, um [Zweck der Medikation]. Es ist wichtig, dass der Patient die Medikamente gemäß den Anweisungen einnimmt und alle erforderlichen Vorsichtsmaßnahmen beachtet. Bei auftretenden Nebenwirkungen oder Problemen sollte der Patient sofort seinen Arzt informieren."
+    },
+    {
+      "id": 7,
+      "title": "",
+      "date": "",
+      "text": "",
+      "images": []
     }
   ],
   "files": [
