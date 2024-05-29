@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { SelectItem } from 'primeng/api';
 import { DataView } from 'primeng/dataview';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
+    selector: 'app-home',
     templateUrl: './home.component.html',
-})
+    styleUrls: ['./home.component.scss'],
+    encapsulation: ViewEncapsulation.None
+  })
+  
 export class HomeComponent implements OnInit {
     products: Product[] = [];
 
