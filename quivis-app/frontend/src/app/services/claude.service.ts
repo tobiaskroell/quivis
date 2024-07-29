@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import Anthropic from '@anthropic-ai/sdk';
+import { HttpClient } from '@angular/common/http';
 
 interface ChatMessage {
     role: 'user' | 'assistant';
@@ -11,9 +12,10 @@ interface ChatMessage {
 })
 export class ClaudeService {
     private anthropic: Anthropic | null = null;
+    private apiUrl = 'http://your-backend-url/api'; // Replace with your actual backend URL
 
-    constructor() {
-        this.initAnthropicClient();
+    constructor(private http: HttpClient) {
+      this.initAnthropicClient();
     }
 
     private initAnthropicClient() {
@@ -24,8 +26,11 @@ export class ClaudeService {
     }
 
     setApiKey(apiKey: string) {
-        localStorage.setItem('claudeApiKey', apiKey);
-        this.initAnthropicClient();
+      localStorage.setItem('claudeApiKey', apiKey);
+      this.initAnthropicClient();
+      
+      // Send the API key to the backend
+      return this.http.post(`${this.apiUrl}/save-claude-api-key`, { apiKey }).toPromise();
     }
 
     getApiKey(): string | null {
@@ -61,5 +66,6 @@ export class ClaudeService {
             console.error('Error in ClaudeService:', error);
             throw error; // Re-throw the error so it can be caught in the component
         }
+
     }
 }

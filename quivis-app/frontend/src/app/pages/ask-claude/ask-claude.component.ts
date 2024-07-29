@@ -37,10 +37,17 @@ export class AskClaudeComponent implements OnInit {
     }
 
     saveApiKey() {
-        if (this.apiKey) {
-            this.claudeService.setApiKey(this.apiKey);
+      if (this.apiKey) {
+        this.claudeService.setApiKey(this.apiKey)
+          .then(() => {
             this.displayDialog = false;
-        }
+            // Show success message
+          })
+          .catch(error => {
+            console.error('Error saving API key:', error);
+            // Show error message
+          });
+      }
     }
 
     async promptClaude() {

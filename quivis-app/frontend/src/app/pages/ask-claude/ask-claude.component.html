@@ -2,26 +2,17 @@
     <div class="col-12">
         <div class="card" style="padding: 0 40px;">
             <h3 style="padding: 20px; padding-top: 30px; text-align: center;">Frag Claude</h3>
-            <div style="background-color: #ffdddd; padding: 20px; margin-bottom: 10px; text-align: center;">
-                <p><b>Bitte beachte, dass die Nutzung dieses Systems lediglich eine Demo-Anwendung darstellt und
-                        keinesfalls eine professionelle medizinische
-                        Beratung oder Behandlung ersetzen kann. Das Claude-Modul dient lediglich als ergänzender
-                        Ideengeber, um
-                        dein Verständnis zu vertiefen und deine Gesprächsgrundlage mit Ärzten zu erweitern. Letztendlich
-                        solltest du dich für alle medizinischen Entscheidungen auf die Expertise von zugelassenen Ärzten
-                        verlassen.</b>
-                </p>
-            </div>
-            <div style="background-color: #ffffff; padding: 20px; margin-bottom: 10px; text-align: center;">
-                <p>Hier findest du eine Schnittstelle für das KI-basierte Sprachmodell Claude von Anthropic. Mit dem
-                    Klick auf den Button „Medizinische Historie senden" kann die medizinische Historie an Claude
-                    übertragen werden und es können Fragen diesbezüglich an Claude gestellt werden.
-                </p>
-                <p>Claude, ist ein hochentwickeltes Sprachmodell und verfügt über die Möglichkeit auf Basis der
-                    gegebenen medizinischen Historie Ideen, Einschätzungen und Empfehlungen zu geben. Das kann zum
-                    Beispiel die Interpretation von Testergebnissen, mögliche Diagnosen oder Behandlungsoptionen sein. 
-                </p>
-            </div>
+            
+
+
+            <div *ngIf="showMedicalWarning" class="warning-message">
+                <b>Bitte beachte, dass die Nutzung des Claude Moduls lediglich eine Demo-Anwendung darstellt und
+                    keinesfalls eine professionelle medizinische Beratung oder Behandlung ersetzen kann. Claude dient lediglich als ergänzender
+                    Ideengeber, um dein Verständnis zu vertiefen und deine Gesprächsgrundlage mit Ärzten zu erweitern. Letztendlich
+                    solltest du dich für alle medizinischen Entscheidungen auf die Expertise von zugelassenen Ärzten
+                    verlassen.</b>
+              </div>
+            
             <div class="grid">
                 <div class="col-12">
                     <div class="card" style="padding: 0 40px;">
@@ -57,4 +48,3 @@
         </p-dialog>
     </div>
 </div>
-

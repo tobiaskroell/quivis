@@ -19,3 +19,38 @@
   align-self: flex-start;
   background-color: #f1f0f0;
 }
+
+.warning-message, .info-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.warning-message {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+.info-message {
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  color: #004085;
+}
+::ng-deep .p-message {
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 15px;
+}
+
+::ng-deep .p-message-warn {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+}
+
+::ng-deep .p-message-info {
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+  color: #004085;
+}
