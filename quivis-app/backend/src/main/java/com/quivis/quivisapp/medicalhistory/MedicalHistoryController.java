@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/entries")
 public class MedicalHistoryController {
 
     private final MedicalHistoryService medicalHistoryService;

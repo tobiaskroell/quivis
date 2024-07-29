@@ -9,5 +9,4 @@ public class QuivisappApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(QuivisappApplication.class, args);
 	}
-
 }
