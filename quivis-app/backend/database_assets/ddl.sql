@@ -1,13 +1,14 @@
--- Create PATIENT_DATA table
 CREATE TABLE PATIENT_DATA (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     date_of_birth DATE NOT NULL,
+	weight INTEGER,
+	gender TEXT,
+	allergies TEXT,
     print_date DATE
 );
 
--- Create MEDICAL_HISTORY table
 CREATE TABLE MEDICAL_HISTORY (
     id SERIAL PRIMARY KEY,
     patient_id INTEGER NOT NULL,
@@ -17,7 +18,6 @@ CREATE TABLE MEDICAL_HISTORY (
     FOREIGN KEY (patient_id) REFERENCES PATIENT_DATA(id)
 );
 
--- Create ISSUING_DOCTORS_OFFICE table
 CREATE TABLE ISSUING_DOCTORS_OFFICE (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -29,29 +29,28 @@ CREATE TABLE ISSUING_DOCTORS_OFFICE (
     email VARCHAR(100)
 );
 
--- Create DRUG table
 CREATE TABLE DRUG (
     id SERIAL PRIMARY KEY,
     agent VARCHAR(100) NOT NULL,
     brand VARCHAR(100),
     potency VARCHAR(50),
     form VARCHAR(50),
-    morning FLOAT,
-    noon FLOAT,
-    evening FLOAT,
-    night FLOAT,
-    unit VARCHAR(20),
-    indications TEXT,
-    reason TEXT
+	unit VARCHAR(20)
 );
 
--- Create MEDICATION_PLAN table
 CREATE TABLE MEDICATION_PLAN (
     id SERIAL PRIMARY KEY,
     patient_id INTEGER NOT NULL,
     drug_id INTEGER NOT NULL,
     issued_by INTEGER NOT NULL,
     issue_date DATE NOT NULL,
+	time_morning FLOAT,
+    time_noon FLOAT,
+    time_evening FLOAT,
+    time_night FLOAT,
+	time_other TEXT,
+    indications TEXT,
+    reason TEXT,
     FOREIGN KEY (patient_id) REFERENCES PATIENT_DATA(id),
     FOREIGN KEY (drug_id) REFERENCES DRUG(id),
     FOREIGN KEY (issued_by) REFERENCES ISSUING_DOCTORS_OFFICE(id)
