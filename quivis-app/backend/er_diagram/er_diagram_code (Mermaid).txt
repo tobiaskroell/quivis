@@ -1,0 +1,55 @@
+erDiagram
+    PATIENT_DATA ||--o{ MEDICAL_HISTORY : "has"
+    PATIENT_DATA ||--o{ MEDICATION_PLAN : "has"
+    DRUG ||--o{ MEDICATION_PLAN : "prescribed_in"
+    ISSUING_DOCTORS_OFFICE ||--o{ MEDICATION_PLAN : "issues"
+    
+    PATIENT_DATA {
+        int id PK
+        string first_name
+        string last_name
+        date date_of_birth
+        date print_date
+    }
+    
+    MEDICAL_HISTORY {
+        int id PK
+        int patient_id FK
+        string title
+        date date
+        text text
+    }
+    
+    ISSUING_DOCTORS_OFFICE {
+        int id PK
+        string name
+        string street
+        string house_number
+        string zip
+        string city
+        string phone
+        string email
+    }
+    
+    DRUG {
+        int id PK
+        string agent
+        string brand
+        string potency
+        string form
+        float morning
+        float noon
+        float evening
+        float night
+        string unit
+        string indications
+        string reason
+    }
+    
+    MEDICATION_PLAN {
+        int id PK
+        int patient_id FK
+        int drug_id FK
+        int issued_by FK
+        date issue_date
+    }
