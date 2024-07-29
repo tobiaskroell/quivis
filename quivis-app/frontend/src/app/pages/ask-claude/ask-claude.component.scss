@@ -1,0 +1,21 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message, .claude-message {
+  max-width: 70%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.claude-message {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+}

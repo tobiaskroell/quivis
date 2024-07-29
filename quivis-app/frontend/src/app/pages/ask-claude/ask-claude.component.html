@@ -21,33 +21,40 @@
                     gegebenen medizinischen Historie Ideen, Einschätzungen und Empfehlungen zu geben. Das kann zum
                     Beispiel die Interpretation von Testergebnissen, mögliche Diagnosen oder Behandlungsoptionen sein. 
                 </p>
-                <p></p>
             </div>
-            <hr>
-            <br>
-            <div class="grid" style="margin-top: 20px; text-align: center;">
+            <div class="grid">
                 <div class="col-12">
-
-                    <span class="p-float-label">
-                        <textarea rows="16" cols="90" pInputTextarea [(ngModel)]="textAreaClaudeResponse" readonly="true"></textarea>
-                        <br>
-                        <br>
-                        <textarea pInputTextarea [(ngModel)]="textAreaUserInput" [rows]="5" [cols]="90" [autoResize]="false" placeholder="Frage eingeben"></textarea>
-                    </span>
-                </div>
-                <div class="col-12" style="padding-bottom: 40px;">
-                    <p-button label="Frag Claude" (onClick)="promptClaude()"></p-button>
-                </div>
-
-                <div class="col-9">
-                </div>
-                <div class="col-12">
+                    <div class="card" style="padding: 0 40px;">
+                        <div class="grid" style="margin-top: 20px; text-align: center;">
+                            <div class="col-12">
+                                <div class="chat-container" style="height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+                                    <div *ngFor="let message of chatHistory" [ngClass]="{'user-message': message.role === 'user', 'claude-message': message.role === 'assistant'}">
+                                        <strong>{{ message.role === 'user' ? 'You' : 'Claude' }}:</strong> {{ message.content }}
+                                    </div>
+                                </div>
+                                <textarea pInputTextarea [(ngModel)]="userInput" [rows]="3" [cols]="90" [autoResize]="false" placeholder="Frage eingeben"></textarea>
+                            </div>
+                            <div class="col-12" style="padding-bottom: 40px;">
+                                <p-button label="Frag Claude" (onClick)="promptClaude()" [disabled]="isLoading"></p-button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <br>
-
-            <p></p>
         </div>
+
+        <p-dialog header="Enter Claude API Key" [(visible)]="displayDialog" [modal]="true" [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
+            <div class="p-fluid">
+            <div class="p-field">
+                <label for="apiKey">API Key</label>
+                <input id="apiKey" type="text" pInputText [(ngModel)]="apiKey" />
+            </div>
+            </div>
+            <ng-template pTemplate="footer">
+            <button pButton type="button" label="Save" (click)="saveApiKey()" [disabled]="!apiKey"></button>
+            </ng-template>
+        </p-dialog>
     </div>
 </div>
+

@@ -19,7 +19,7 @@ export class NutritionalDiaryComponent {
   constructor(private claudeService: ClaudeService) {}
 
   async promptClaude() {
-    this.claudeResponse = await this.claudeService.getAnswer('I ate a salad for lunch today');
+    // this.claudeResponse = await this.claudeService.getAnswer('I ate a salad for lunch today');
   }
   
 }
